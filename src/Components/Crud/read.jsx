@@ -8,7 +8,7 @@ function Read() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_WEB_URL}/Profile`)
+      .get(`${import.meta.env.VITE_API_WEB_URL}/RedexData`)
       .then((res) => setUsers(res.data))
       .catch((err) => {
         setError(err.message);

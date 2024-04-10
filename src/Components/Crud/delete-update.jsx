@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Update() {
@@ -11,7 +11,7 @@ function Update() {
 
   const getData = () => {
     axios
-      .get(`${import.meta.env.VITE_API_WEB_URL}/Profile`)
+      .get(`${import.meta.env.VITE_API_WEB_URL}/RedexData`)
       .then((response) => {
         setUsers(response.data);
       })
@@ -23,7 +23,7 @@ function Update() {
 
   const onDelete = (id) => {
     axios
-      .delete(`${import.meta.env.VITE_API_WEB_URL}/Profile/${id}`)
+      .delete(`${import.meta.env.VITE_API_WEB_URL}/RedexData/${id}`)
       .then(() => {
         getData();
       })
@@ -35,7 +35,7 @@ function Update() {
 
   const onUpdate = (id, newData) => {
     axios
-      .put(`${import.meta.env.VITE_API_WEB_URL}/Profile/${id}`, newData)
+      .put(`${import.meta.env.VITE_API_WEB_URL}/RedexData/${id}`, newData)
       .then(() => {
         getData();
       })

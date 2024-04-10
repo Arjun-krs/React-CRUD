@@ -19,7 +19,7 @@ function Create() {
 
   const addPost = (formData) => {
     axios
-      .post(`${import.meta.env.VITE_API_WEB_URL}/Profile`, formData)
+      .post(`${import.meta.env.VITE_API_WEB_URL}/RedexData`, formData)
       .then((response) => {
         setPosts([response.data, ...posts]);
         setForm({

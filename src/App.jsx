@@ -14,7 +14,7 @@ function App() {
           <nav>
             <ul
               className=" d-flex justify-content-between fs-3"
-              style={{ listStyleType: "none" }}
+              style={{ listStyleType: "none" ,gap:"50px"}}
             >
               <li>
                 <Link
